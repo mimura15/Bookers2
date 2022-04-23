@@ -1,0 +1,19 @@
+<h2>User info</h2>
+
+<table class="table">
+	<tr></tr>
+	<tr>
+		<th>name</th>
+		<th><%= user.name %></th>
+	</tr>
+	<tr>
+		<th>introduction</th>
+		<th><%= user.introduction %></th>
+	</tr>
+</table>
+
+<div class="row">
+	<a class="btn btn-outline-secondary btn-block edit_user_path" href="/users/:id/edit">
+		<i class="fas fa-user-cog"></i>
+	</a>
+</div>
