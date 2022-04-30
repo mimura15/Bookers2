@@ -24,6 +24,11 @@
 								<button type="button" class="btn btn-sm btn-success">Edit</button>
 							<% end %>
 						</td>
+						<td>
+							<%= link_to destroy_book_path(@book.id), method: :delete, "data-confirm" => "本当に消しますか？" do %>
+								<button type="button" class="btn btn-sm btn-danger">Destroy</button>
+							<% end %>
+						</td>
 					</tr>
 				</tbody>
 			</table>
