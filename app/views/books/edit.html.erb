@@ -4,14 +4,23 @@
 			<h1>Editing Book</h1>
 			<%= form_with model: @book do |f| %>
 				<div class="form-group">
-					<label for="inputTitle">Title</label>
+					<label for="inputTitle">Title</label><br>
 					<%= f.text_field :title, autofocus: true, id:"inputTitle", placeholder:"題名" %>
 				</div>
 				
 				<div class="form-group">
-					<label for="inputOpinion">Opinion</label>
-					
+					<label for="inputOpinion">Opinion</label><br>
+					<%= f.text_area :body, autofocus: true, id:"inputOpinion", placeholder:"意見" %>
 				</div>
+				
+				<div class="form-group">
+					<%= f.submit "Update Book" %>
+				</div>
+			<% end %>
+			
+			<%= link_to "Show", book_path(@book.id) %>
+			 | 
+			<%= link_to "Back", books_path %>
 		</div>
 	</div>
 </div>
