@@ -15,11 +15,11 @@
 					</tr>
 				</thead>
 				<tbody>
-					<%= @users.each do |user| %>
+					<% @users.each do |user| %>
 					<tr>
 						<td>
-							<%= if user.image.attached? %>
-								<%= image_tag user.image, size: "80x80" %>
+							<% if user.image.attached? %>
+ 								<%= image_tag user.image, size: "80x80" %>
 							<% else %>
 								<%= image_tag 'no-image', size: "80x80" %>
 							<% end %>
