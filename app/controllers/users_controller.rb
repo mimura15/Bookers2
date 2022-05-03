@@ -16,9 +16,7 @@ class UsersController < ApplicationController
     if @user == current_user
       render :edit
     else
-      @books = @user.books
-      @book = Book.new
-      render :show
+     redirect_to user_path(current_user)
     end
   end
   
@@ -33,6 +31,6 @@ class UsersController < ApplicationController
   
   private
   def user_params
-    params.require(:user).permit(:name, :introduction, :image)
+    params.require(:user).permit(:name, :introduction, :profile_image)
   end
 end
