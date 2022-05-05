@@ -17,9 +17,7 @@ class BooksController < ApplicationController
     if @book.user == current_user
       render :edit
     else
-      @books = Book.all
-      @user = current_user
-      render :index
+      redirect_to books_path
     end
   end
   
